@@ -1,15 +1,15 @@
-#include "Exit.h"
+#include "Level.h"
 
 //------------------------------
-Exit::Exit()
+Level::Level()
 {
 }
 //------------------------------
-Exit::~Exit()
+Level::~Level()
 {
 }
 //-------------------------------
-void Exit::action()
+void Level::buildLevel(Board&)
 {
 
 }

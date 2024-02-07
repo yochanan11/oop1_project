@@ -1,15 +1,15 @@
-#include "Exit.h"
+#include "Board.h"
 
 //------------------------------
-Exit::Exit()
+Board::Board()
 {
 }
 //------------------------------
-Exit::~Exit()
+Board::~Board()
 {
 }
 //-------------------------------
-void Exit::action()
+void Board::readBoardText()
 {
 
 }

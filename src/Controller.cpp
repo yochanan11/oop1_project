@@ -1,15 +1,15 @@
-#include "Exit.h"
+#include "Controller.h"
 
 //------------------------------
-Exit::Exit()
+Controller::Controller()
 {
 }
 //------------------------------
-Exit::~Exit()
+Controller::~Controller()
 {
 }
 //-------------------------------
-void Exit::action()
+void Controller::run()
 {
 
 }
