@@ -7,15 +7,9 @@ class MovingObj:public Object
 public:
 	MovingObj();
 	~MovingObj();
+	virtual void move();
+	virtual void collusion();
 
 private:
 
 };
-
-MovingObj()
-{
-}
-
-~MovingObj()
-{
-}
