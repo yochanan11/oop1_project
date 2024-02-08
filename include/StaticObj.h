@@ -2,7 +2,6 @@
 #include "ObjectGame.h"
 
 class StaticObj:public ObjectGame
-
 {
 public:
 	StaticObj();

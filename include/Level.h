@@ -7,7 +7,7 @@ class Level
 public:
 	Level();
 	~Level();
-	void buildLevel(Board&);
+	bool buildLevel(Board&);
 
 
 private:

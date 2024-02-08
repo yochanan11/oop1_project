@@ -8,10 +8,20 @@ public:
 	~Mouse();
 	void move();
 	void collusion();
+	int getLife() const;
+	void addLife();
+	void lifeDownload();
+	int getPoint() const;
+	void addPoint();
+	int getKey() const;
+	void addKey();
+	
+
+
 
 private:
-	int m_life;
-	int m_point;
-	int m_time_left;
-	int num_of_key;
+	int m_life = 3;
+	int m_point = 0;
+	int m_time_left = 0;
+	int m_num_of_key = 0;
 };
