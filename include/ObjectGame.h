@@ -1,10 +1,10 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-class Object
+class ObjectGame
 {
 public:
-	Object();
-	~Object();
+	ObjectGame();
+	virtual	~ObjectGame();
 	virtual void draw();
 private:
 	sf::Sprite m_sprite;

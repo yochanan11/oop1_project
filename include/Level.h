@@ -1,4 +1,6 @@
 #pragma once
+#include "Board.h"
+#include "CurrentLevel.h"
 
 class Level
 {

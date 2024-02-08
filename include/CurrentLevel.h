@@ -1,4 +1,8 @@
 #pragma once
+#include "ObjectGame.h"
+#include "Cat.h"
+#include "Mouse.h"
+#include <vector>
 
 class CurrentLevel
 {
@@ -10,9 +14,9 @@ public:
 		void insertObj();
 		
 private:
-	vector <vector <Object*>> m_current_level;
-	vector <Cat> m_cats;
-	Player m_player;
+	std::vector <std::vector <ObjectGame*>> m_current_level;
+	std::vector <Cat> m_cats;
+	Mouse m_mouse;
 	int rows, cols;
 };
 

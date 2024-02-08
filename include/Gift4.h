@@ -6,7 +6,7 @@ class Gift4 : public Gift
 
 public:
 	Gift4();
-	Gift4();
+	~Gift4();
 
 private:
 

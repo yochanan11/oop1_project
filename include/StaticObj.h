@@ -1,7 +1,7 @@
 #pragma once
-#include "Object.h"
+#include "ObjectGame.h"
 
-class StaticObj:public Object
+class StaticObj:public ObjectGame
 
 {
 public:

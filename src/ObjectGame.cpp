@@ -1,14 +1,14 @@
-#include "Object.h"
+#include "ObjectGame.h"
 //------------------------------
-Object::Object()
+ObjectGame::ObjectGame()
 {
 }
 //------------------------------
-Object::~Object()
+ObjectGame::~ObjectGame()
 {
 }
 //------------------------------
-void Object::draw()
+void ObjectGame::draw()
 {
 
 }
