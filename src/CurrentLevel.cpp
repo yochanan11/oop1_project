@@ -1,9 +1,15 @@
 #include "CurrentLevel.h"
 #include "macroes.h"
+#include "Door.h"
+#include "Wall.h"
+#include "Gift.h"
+#include "Key.h"
+#include "Cheese.h"
+
 #include <iostream>
 
 //------------------------------
-CurrentLevel::CurrentLevel()
+CurrentLevel::CurrentLevel():m_mouse(m_mouse_tex)
 {
 	if (!m_cat_tex.loadFromFile(CAT_F) ||
 		!m_cheese_tex.loadFromFile(CHEESE_F) ||
@@ -36,9 +42,9 @@ void CurrentLevel::delFromVector()
 
 }
 //----------------------------------------
-void CurrentLevel::insertObj()
+void CurrentLevel::insertObj(std::vector<ObjectGame*> vec)
 {
-
+	m_current_level.push_back(vec);
 }
 //----------------------------------------
 int CurrentLevel::getRows() const { return m_rows; }
@@ -50,12 +56,53 @@ void CurrentLevel::setRows(const int rows) { m_rows = rows; }
 //----------------------------------------
 void CurrentLevel::setCols(const int cols) { m_cols = cols; }
 //---------------------------------------
-sf::Texture& CurrentLevel::getTexture(const char note) 
+ObjectGame* CurrentLevel::getTexture(const char note) 
 {
-	switch (note)
+	if(note == CAT_N)
+	{
+		Cat* cat_ptr;
+		auto cat = Cat(m_mouse_tex);
+		cat_ptr = &cat;
+		return cat_ptr;
+	}
+	else if(note == MOUSE_N)
+	{
+		auto mouse = Mouse(m_mouse_tex);
+		return &mouse;
+	}
+	else if (note == DOOR_N)
+	{
+		auto door = Door();
+		return &door;
+	}
+	else if (note == KEY_N)
+	{
+		auto key = Key();
+		return &key;
+	}
+	else if (note == WALL_N)
+	{
+		auto wall = Wall(m_wall_tex);
+		return &wall;
+	}
+	else if (note == GIFT_N)
+	{
+		auto gift = Gift();
+		return &gift;
+	}
+	else if (note == CHEESE_N) {
+		auto cheese = Cheese();
+		return &cheese;
+	}
+	else {
+		auto object_default = ObjectGame(m_default_tex);
+		return &object_default;
+	}
+
+	/*switch (note)
 	{
 	case CAT_N:
-		return m_cat_tex;
+		return &cat;
 	case MOUSE_N:
 		return m_mouse_tex;
 	case CHEESE_N:
@@ -70,7 +117,7 @@ sf::Texture& CurrentLevel::getTexture(const char note)
 		return m_wall_tex;
 	case SPASE:
 		return m_default_tex;
-	}
+	}*/
 }
 //----------------------------------------
 

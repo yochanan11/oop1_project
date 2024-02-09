@@ -22,8 +22,9 @@ bool Level::buildLevel(Board& board)
 			std::vector<ObjectGame*> temp_vec;
 			for (size_t c = 0; c < m_current_level.getCols(); c++)
 			{
-				temp_vec.push_back(&ObjectGame(m_current_level.getTexture(board.getNoteForVec(r, c))));
+				temp_vec.push_back(m_current_level.getTexture(board.getNoteForVec(r, c)));
 			}
+			m_current_level.insertObj(temp_vec);
 		}
 		return true;
 	}

@@ -6,6 +6,7 @@ class Erasable : public StaticObj
 
 public:
 	Erasable();
+	Erasable(sf::Texture&);
 	~Erasable();
 	bool isDel() const;
 	void eatObj(const bool);

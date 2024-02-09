@@ -4,7 +4,7 @@
 class Mouse : public MovingObj
 {
 public:
-	Mouse();
+	Mouse(sf::Texture&);
 	~Mouse();
 	void move();
 	void collusion();

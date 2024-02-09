@@ -1,6 +1,7 @@
 #include "Erasable.h"
+Erasable::Erasable(){}
 //-----------------------------------
-Erasable::Erasable() {
+Erasable::Erasable(sf::Texture& tex):StaticObj(tex) {
 
 }
 //-----------------------------------

@@ -11,12 +11,12 @@ public:
 	~CurrentLevel();
 	void draw();
 	void delFromVector();
-	void insertObj();
+	void insertObj(std::vector<ObjectGame*>);
 	int getRows() const;
 	void setRows(const int);
 	int getCols() const;
 	void setCols(const int);
-	sf::Texture& getTexture(const char);
+	ObjectGame* getTexture(const char);
 
 
 private:

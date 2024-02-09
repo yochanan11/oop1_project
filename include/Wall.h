@@ -5,7 +5,7 @@ class Wall : public StaticObj
 {
 
 public:
-	Wall();
+	Wall(sf::Texture&);
 	~Wall();
 	void draw();
 

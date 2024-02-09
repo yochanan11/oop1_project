@@ -1,7 +1,8 @@
 #include "MovingObj.h"
 //-------------------------------------
-MovingObj::MovingObj()
+MovingObj::MovingObj(sf::Texture& tex):ObjectGame(tex)
 {
+	
 }
 //-------------------------------------
 MovingObj::~MovingObj()
