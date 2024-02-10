@@ -1,6 +1,6 @@
 #include "Gift.h"
 //-----------------------------------
-Gift::Gift() {
+Gift::Gift(sf::Texture& tex) :Erasable(tex) {
 
 }
 //-----------------------------------

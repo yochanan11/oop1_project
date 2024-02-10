@@ -5,7 +5,7 @@ class Gift : public Erasable
 {
 
 public:
-	Gift();
+	Gift(sf::Texture&);
 	~Gift();
 	void chooseGift();
 

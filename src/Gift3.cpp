@@ -1,7 +1,7 @@
 #include "Gift3.h"
 //-----------------------------------
-Gift3::Gift3() {
-
+Gift3::Gift3(sf::Texture& tex) :Gift(tex)
+{
 }
 //-----------------------------------
 Gift3::~Gift3() {

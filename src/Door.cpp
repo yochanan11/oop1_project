@@ -1,6 +1,6 @@
 #include "Door.h"
 //-----------------------------------
-Door::Door() {
+Door::Door(sf::Texture& tex) : Erasable(tex) {
 
 }
 //-----------------------------------

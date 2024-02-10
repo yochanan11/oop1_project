@@ -1,12 +1,5 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-/*
-sf::RanderWindow m_window_game
-+float width
-+float height
-+drawGameDetails()
-+drawGame()
-*/
 
 class DrawGame
 {

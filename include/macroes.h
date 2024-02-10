@@ -1,4 +1,9 @@
+//-Macroes.h - Saving constant variables
+
+#pragma once
 #include <string>
+#include <SFML/Graphics.hpp>
+
 //name for image
 const std::string CAT_F = "cat.png";
 const std::string MOUSE_F = "mouse.png";
@@ -20,3 +25,14 @@ const char GIFT_N = '$';
 const char DOOR_N = 'D';
 const char WALL_N = '#';
 const char SPASE = ' ';
+
+//--------------------------------------------
+const float TILE_WIDTH = 60.f;
+const float TILE_HEIGHT = 60.f;
+const int MENU_WIDTH = 200;
+const int BOARD_WIDTH = 1200;
+const int WINDOW_HEIGHT = 850;
+const int HEIGHT_GRID = 24;
+
+const sf::Color DEEP_BLUE(0, 25, 51);
+const sf::Color LIGHT_BLUE(153, 153, 255);

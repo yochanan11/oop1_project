@@ -5,7 +5,7 @@ class Door : public Erasable
 {
 
 public:
-	Door();
+	Door(sf::Texture&);
 	~Door();
 
 private:

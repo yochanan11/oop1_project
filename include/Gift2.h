@@ -5,7 +5,7 @@ class Gift2 : public Gift
 {
 
 public:
-	Gift2();
+	Gift2(sf::Texture&);
 	~Gift2();
 
 private:

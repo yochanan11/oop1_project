@@ -1,6 +1,6 @@
 #include "Cheese.h"
 //-----------------------------------
-Cheese::Cheese() {
+Cheese::Cheese(sf::Texture& tex):Erasable(tex){
 
 }
 //-----------------------------------

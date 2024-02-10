@@ -5,7 +5,7 @@ class Cheese : public Erasable
 {
 
 public:
-	Cheese();
+	Cheese(sf::Texture&);
 	~Cheese();
 
 private:
