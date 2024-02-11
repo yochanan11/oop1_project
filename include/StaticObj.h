@@ -7,7 +7,7 @@ public:
 	StaticObj();
 	StaticObj(sf::Texture&);
 	~StaticObj();
-	void draw();
+	sf::Sprite draw();
 private:
 
 };

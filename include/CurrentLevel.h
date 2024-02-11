@@ -16,6 +16,8 @@ public:
 	void setRows(const int);
 	int getCols() const;
 	void setCols(const int);
+	int getSizeVectorOfObj()const;
+	ObjectGame* getSpriteForIndex(const int,const int);
 	//ObjectGame* getTexture(const char);
 
 

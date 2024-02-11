@@ -8,9 +8,13 @@ public:
 	~DrawGame();
 	void drawGameDetails();
 	void drawGame();
+	bool isOpen()const;
+	void closeWindow();
+	//sf::Event pollEvent(sf::Event);
+	sf::RenderWindow* getWindow();
 
 private:
-	sf::RenderWindow* m_window = nullptr;
+	sf::RenderWindow m_window;
 	float m_width;
 	float m_height;
 };

@@ -14,6 +14,6 @@ public:
 private:
 	Board m_my_board;
 	Level m_level;
-	CurrentLevel m_current_level;
+	//CurrentLevel m_current_level;
 	DrawGame m_draw_game;
 };

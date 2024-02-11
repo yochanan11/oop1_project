@@ -7,7 +7,7 @@ class Wall : public StaticObj
 public:
 	Wall(sf::Texture&);
 	~Wall();
-	void draw();
+	sf::Sprite draw();
 
 private:
 

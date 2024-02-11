@@ -1,6 +1,7 @@
 #include "CurrentLevel.h"
 #include "macroes.h"
 #include "Level.h"
+#include <iostream>
 
 //------------------------------
 CurrentLevel::CurrentLevel()
@@ -35,8 +36,15 @@ void CurrentLevel::setRows(const int rows) { m_rows = rows; }
 //----------------------------------------
 void CurrentLevel::setCols(const int cols) { m_cols = cols; }
 //---------------------------------------
-
+int CurrentLevel::getSizeVectorOfObj()const { return m_current_level.size(); }
 //----------------------------------------
+ObjectGame* CurrentLevel::getSpriteForIndex(const int i, const int j)
+{
+	//std::cout << m_current_level.size();
+	return m_current_level[i][j];
+}
+//----------------------------------------
+
 
 
 

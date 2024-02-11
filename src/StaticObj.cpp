@@ -10,6 +10,7 @@ StaticObj::~StaticObj()
 {
 }
 //-------------------------------------
-void StaticObj::draw()
+sf::Sprite StaticObj::draw()
 {
+	return m_sprite;
 }

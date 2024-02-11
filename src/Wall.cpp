@@ -8,7 +8,7 @@ Wall::~Wall() {
 
 }
 //-----------------------------------
-void Wall::draw() {
-
+sf::Sprite Wall::draw() {
+	return m_sprite;
 }
 //-----------------------------------

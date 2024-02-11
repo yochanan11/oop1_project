@@ -25,6 +25,8 @@ const char GIFT_N = '$';
 const char DOOR_N = 'D';
 const char WALL_N = '#';
 const char SPASE = ' ';
+const char BACKGROUND_N = 'B';
+
 
 //--------------------------------------------
 const float TILE_WIDTH = 60.f;
