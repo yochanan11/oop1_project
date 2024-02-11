@@ -21,3 +21,7 @@ sf::Sprite ObjectGame::draw()
 {
 	return m_sprite;
 }
+//------------------------------
+bool ObjectGame::isDel() const { return true; }
+//------------------------------
+void ObjectGame:: eatObj(const bool){}

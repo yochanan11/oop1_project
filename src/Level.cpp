@@ -34,30 +34,11 @@ Level::~Level()
 //-------------------------------
 bool Level::buildLevel(Board& board)
 {
-	float margin_left = (BOARD_WIDTH - (m_current_level.getCols() * TILE_WIDTH)) / 2 + MENU_WIDTH + TILE_WIDTH / 2;
-	float margin_up = (WINDOW_HEIGHT - (m_current_level.getRows() * TILE_HEIGHT)) / 2 + TILE_HEIGHT / 2;
 	int row, col;
 	if (board.readBoardText(row, col))
 	{
 		m_current_level.setRows(row);
 		m_current_level.setCols(col);
-		std::cout << m_current_level.getRows() << " " << m_current_level.getCols() << "\n";
-		for (size_t r = 0; r < m_current_level.getRows(); r++)
-		{
-			std::vector<ObjectGame*> temp_vec;
-			for (size_t c = 0; c < m_current_level.getCols(); c++)
-			{ 
-				ObjectGame* ptr = getObject(board.getNoteForVec(r, c));
-				ptr->setPosition(sf::Vector2f((TILE_WIDTH * r) + margin_left,
-					(TILE_HEIGHT * row) + margin_up));
-				ptr->setScale(TILE_WIDTH / ptr->draw().getLocalBounds().width, TILE_HEIGHT / ptr->draw().getLocalBounds().height);
-				ptr->setOrigin(ptr->draw().getLocalBounds().width / 2, ptr->draw().getLocalBounds().height / 2);
-				temp_vec.push_back(ptr);
-			}
-			m_current_level.insertObj(temp_vec);
-			std::cout << m_current_level.getRows() << " " << m_current_level.getCols() << "\n";
-
-		}
 		return true;
 	}
 	return false;
@@ -67,9 +48,8 @@ ObjectGame* Level::getObject(const char note)
 {
 	if (note == CAT_N)
 	{
-		Cat* cat = new Cat(m_mouse_tex);
+		Cat* cat = new Cat(m_cat_tex);
 		m_object_game = cat;
-
 	}
 	else if (note == MOUSE_N)
 	{

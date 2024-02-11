@@ -38,12 +38,12 @@ void CurrentLevel::setCols(const int cols) { m_cols = cols; }
 //---------------------------------------
 int CurrentLevel::getSizeVectorOfObj()const { return m_current_level.size(); }
 //----------------------------------------
-ObjectGame* CurrentLevel::getSpriteForIndex(const int i, const int j)
+/*std::unique_ptr <ObjectGame> CurrentLevel::getSpriteForIndex(const int i)
 {
-	//std::cout << m_current_level.size();
-	return m_current_level[i][j];
+	std::cout << m_current_level.size();
+	return std::unique_ptr <ObjectGame>(m_current_level[i]);
 }
-//----------------------------------------
+--*/
 
 
 

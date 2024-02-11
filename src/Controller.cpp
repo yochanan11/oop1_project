@@ -25,7 +25,7 @@ void Controller::run()
           for (size_t i = 0; i < m_level.getCurrentLevel().getRows(); i++)
           {
               for (size_t j = 0; j < m_level.getCurrentLevel().getRows(); j++)
-                  m_draw_game.getWindow()->draw(m_level.getCurrentLevel().getSpriteForIndex(i, j)->draw());
+                  m_draw_game.getWindow()->draw(m_level.getCurrentLevel().getSpriteForIndex(i)->draw());
           }
           m_draw_game.getWindow()->display();
 

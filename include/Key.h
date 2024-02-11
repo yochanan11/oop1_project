@@ -1,7 +1,7 @@
 #pragma once
-#include "Erasable.h"
+#include "StaticObj.h"
 
-class Key : public Erasable
+class Key : public StaticObj
 {
 
 public:

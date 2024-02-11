@@ -1,7 +1,7 @@
 #pragma once
-#include "Erasable.h"
+#include "StaticObj.h"
 
-class Door : public Erasable
+class Door : public StaticObj
 {
 
 public:

@@ -17,12 +17,12 @@ public:
 	int getCols() const;
 	void setCols(const int);
 	int getSizeVectorOfObj()const;
-	ObjectGame* getSpriteForIndex(const int,const int);
+	std::unique_ptr <ObjectGame> getSpriteForIndex(const int);
 	//ObjectGame* getTexture(const char);
 
 
 private:
-	std::vector <std::vector <ObjectGame*>> m_current_level;
+	std::vector <std::unique_ptr <ObjectGame>> m_current_level;
 	std::vector <Cat> m_cats;
 	//Mouse m_mouse;
 	int m_rows, m_cols;

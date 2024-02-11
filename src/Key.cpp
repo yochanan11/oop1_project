@@ -1,6 +1,6 @@
 #include "Key.h"
 //-----------------------------------
-Key::Key(sf::Texture& tex):Erasable(tex){
+Key::Key(sf::Texture& tex):StaticObj(tex){
 
 }
 //-----------------------------------
