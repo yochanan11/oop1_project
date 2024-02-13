@@ -4,6 +4,8 @@
 #include "Mouse.h"
 #include <vector>
 
+class StaticObj;
+
 class CurrentLevel
 {
 public:
@@ -11,21 +13,18 @@ public:
 	~CurrentLevel();
 	void draw();
 	void delFromVector();
-	void insertObj(std::vector<ObjectGame*>);
-	int getRows() const;
-	void setRows(const int);
-	int getCols() const;
-	void setCols(const int);
+	void insertObj(StaticObj*);
+	
 	int getSizeVectorOfObj()const;
 	std::unique_ptr <ObjectGame> getSpriteForIndex(const int);
 	//ObjectGame* getTexture(const char);
 
 
 private:
-	std::vector <std::unique_ptr <ObjectGame>> m_current_level;
+	std::vector <std::unique_ptr <StaticObj>> m_current_level;
 	std::vector <Cat> m_cats;
-	//Mouse m_mouse;
-	int m_rows, m_cols;
+	Mouse m_mouse;
+	
 };
 
 

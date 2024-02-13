@@ -5,7 +5,7 @@ class Key : public StaticObj
 {
 
 public:
-	Key(sf::Texture&);
+	Key();
 	~Key();
 
 private:

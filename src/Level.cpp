@@ -34,57 +34,33 @@ Level::~Level()
 //-------------------------------
 bool Level::buildLevel(Board& board)
 {
-	int row, col;
-	if (board.readBoardText(row, col))
+	
+	if (board.readBoardText())
 	{
-		m_current_level.setRows(row);
-		m_current_level.setCols(col);
 		return true;
 	}
 	return false;
 }
 //-------------------------------------------------
-ObjectGame* Level::getObject(const char note)
+std::unique_ptr <ObjectGame> Level::getObject(const char note)
 {
-	if (note == CAT_N)
+	switch (note)
 	{
-		Cat* cat = new Cat(m_cat_tex);
-		m_object_game = cat;
+	case CAT_N:
+		return std::make_unique<Cat>;
+	case MOUSE_N:
+		return std::make_unique<Mouse>;
+	case CHEESE_N:
+		return std::make_unique<Cheese>;
+	case GIFT_N:
+		return std::make_unique<Gift>;
+	case KEY_N:
+		return std::make_unique<Key>;
+	case DOOR_N:
+		return std::make_unique<Door>;
+	case WALL_N:
+		return std::make_unique<Wall>;
 	}
-	else if (note == MOUSE_N)
-	{
-		Mouse* mouse = new Mouse(m_mouse_tex);
-		m_object_game = mouse;
-	}
-	else if (note == DOOR_N)
-	{
-		Door* door = new Door(m_door_tex);
-		m_object_game = door;
-	}
-	else if (note == KEY_N)
-	{
-		Key* key = new Key(m_key_tex);
-		m_object_game = key;
-	}
-	else if (note == WALL_N)
-	{
-		Wall* wall = new Wall(m_wall_tex);
-		m_object_game = wall;
-	}
-	else if (note == GIFT_N)
-	{
-		Gift* gift = new Gift(m_gift_tex);
-		m_object_game = gift;
-	}
-	else if (note == CHEESE_N) {
-		Cheese* cheese = new Cheese(m_cheese_tex);
-		m_object_game = cheese;
-	}
-	else {
-		auto object_default = ObjectGame(m_default_tex);
-		m_object_game = &object_default;
-	}
-	return m_object_game;
 }
 //-------------------------------------------------
 sf::Texture& Level::getTexture(const char note) 

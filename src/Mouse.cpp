@@ -1,6 +1,6 @@
 #include "Mouse.h"
 //-----------------------------------
-Mouse::Mouse(sf::Texture& tex) :MovingObj(tex) {
+Mouse::Mouse(){
 
 }
 //-----------------------------------

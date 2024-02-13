@@ -5,7 +5,7 @@
 class MovingObj:public ObjectGame
 {
 public:
-	MovingObj(sf::Texture&);
+	MovingObj();
 	~MovingObj();
 	virtual void move();
 	virtual void collusion();

@@ -1,6 +1,6 @@
 #include "Wall.h"
 //-----------------------------------
-Wall::Wall(sf::Texture& tex) :StaticObj(tex) {
+Wall::Wall() {
 
 }
 //-----------------------------------

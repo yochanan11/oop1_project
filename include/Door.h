@@ -5,7 +5,7 @@ class Door : public StaticObj
 {
 
 public:
-	Door(sf::Texture&);
+	Door();
 	~Door();
 
 private:

@@ -5,7 +5,7 @@ class Cheese : public StaticObj
 {
 
 public:
-	Cheese(sf::Texture&);
+	Cheese();
 	~Cheese();
 
 private:

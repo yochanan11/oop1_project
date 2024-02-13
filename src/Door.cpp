@@ -1,6 +1,6 @@
 #include "Door.h"
 //-----------------------------------
-Door::Door(sf::Texture& tex) : StaticObj(tex) {
+Door::Door() {
 
 }
 //-----------------------------------

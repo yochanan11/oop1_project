@@ -5,7 +5,7 @@ class Gift : public StaticObj
 {
 
 public:
-	Gift(sf::Texture&);
+	Gift();
 	~Gift();
 	void chooseGift();
 

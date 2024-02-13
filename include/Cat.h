@@ -4,7 +4,7 @@
 class Cat : public MovingObj
 {
 public:
-	Cat(sf::Texture&);
+	Cat();
 	~Cat();
 	void move();
 	void collusion();

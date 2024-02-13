@@ -8,7 +8,7 @@ public:
 	Level();
 	~Level();
 	bool buildLevel(Board&);
-	ObjectGame* getObject(const char);
+	std::unique_ptr<ObjectGame> getObject(const char);
 	sf::Texture& getTexture(const char);
 	CurrentLevel getCurrentLevel()const;
 private:
