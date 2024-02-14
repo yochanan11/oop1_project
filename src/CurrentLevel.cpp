@@ -27,7 +27,7 @@ void CurrentLevel::insertObj(std::unique_ptr<StaticObj> vec)
 	m_current_level.push_back(vec);
 }
 //----------------------------------------
-int CurrentLevel::getSizeVectorOfObj()const { return m_current_level.size(); }
+int CurrentLevel::getSizeVectorOfObj()const { return int(m_current_level.size()); }
 //----------------------------------------
 /*std::unique_ptr <ObjectGame> CurrentLevel::getSpriteForIndex(const int i)
 {

@@ -31,10 +31,10 @@ std::unique_ptr <ObjectGame> Level::getObject(const char note)
 {
 	switch (note)
 	{
-	case CAT_N:
+	/*case CAT_N:
 		return std::make_unique<Cat>();
 	case MOUSE_N:
-		return std::make_unique<Mouse>();
+		return std::make_unique<Mouse>();*/
 	case CHEESE_N:
 		return std::make_unique<Cheese>();
 	case GIFT_N:

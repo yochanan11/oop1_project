@@ -8,7 +8,8 @@ Wall::~Wall() {
 
 }
 //-----------------------------------
-sf::Sprite Wall::draw() {
-	return m_sprite;
+void Wall::draw(sf::RenderWindow& window)
+{
+	window.draw(m_sprite);
 }
 //-----------------------------------
