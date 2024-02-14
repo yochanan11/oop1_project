@@ -12,10 +12,7 @@ ObjectGame::~ObjectGame()
 {
 }
 //------------------------------
-sf::Sprite ObjectGame::draw()
-{
-	return m_sprite;
-}
+
 //------------------------------
 bool ObjectGame::isDel() const { return true; }
 //------------------------------

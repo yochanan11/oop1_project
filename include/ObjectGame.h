@@ -10,7 +10,7 @@ public:
 	bool isDel() const;
 	void eatObj(const bool);
 	virtual	~ObjectGame() = default;
-	virtual sf::Sprite draw();
+	virtual void draw(sf::RenderWindow&) = 0;
 protected:
 	sf::Sprite m_sprite;
 private:

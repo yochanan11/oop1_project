@@ -22,7 +22,7 @@ void CurrentLevel::delFromVector()
 
 }
 //----------------------------------------
-void CurrentLevel::insertObj(StaticObj* vec)
+void CurrentLevel::insertObj(std::unique_ptr<StaticObj> vec)
 {
 	m_current_level.push_back(vec);
 }

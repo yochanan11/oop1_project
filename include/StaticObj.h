@@ -6,7 +6,7 @@ class StaticObj:public ObjectGame
 public:
 	StaticObj();
 	~StaticObj();
-	sf::Sprite draw();
+	void draw(sf::RenderWindow&);
 private:
 
 };

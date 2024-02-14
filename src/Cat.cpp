@@ -1,6 +1,9 @@
 #include "Cat.h"
+#include "SingleTone.h"
+#include "macroes.h"
+
 //-----------------------------------
-Cat::Cat() {
+Cat::Cat():m_sprite(SingleTone::instance().getTexture(CAT_N) {
 
 }
 //-----------------------------------

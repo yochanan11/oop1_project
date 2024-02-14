@@ -1,10 +1,10 @@
 #pragma once
 #include "ObjectGame.h"
-#include "Cat.h"
-#include "Mouse.h"
 #include <vector>
 
 class StaticObj;
+class Mouse;
+class Cat;
 
 class CurrentLevel
 {
@@ -13,7 +13,7 @@ public:
 	~CurrentLevel();
 	void draw();
 	void delFromVector();
-	void insertObj(StaticObj*);
+	void insertObj(std::unique_ptr<StaticObj>);
 	
 	int getSizeVectorOfObj()const;
 	std::unique_ptr <ObjectGame> getSpriteForIndex(const int);
@@ -23,7 +23,7 @@ public:
 private:
 	std::vector <std::unique_ptr <StaticObj>> m_current_level;
 	std::vector <Cat> m_cats;
-	Mouse m_mouse;
+	//Mouse m_mouse;
 	
 };
 
